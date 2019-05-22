@@ -1,0 +1,29 @@
+{
+  "name": "stock-public-form-rss",
+  "version": "1.0.0",
+  "description": "台灣股票公開申購RSS產生器",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmyliao11/StockPublicFormRss.git"
+  },
+  "keywords": [
+    "股票申購",
+    "RSS"
+  ],
+  "author": "JimmyLiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimmyliao11/StockPublicFormRss/issues"
+  },
+  "homepage": "https://github.com/jimmyliao11/StockPublicFormRss#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "iconv-lite": "^0.4.24",
+    "rss": "^1.2.2"
+  }
+}
