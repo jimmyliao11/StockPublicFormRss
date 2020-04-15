@@ -1,5 +1,4 @@
 name: Node App Helper Actions
-uses: guahanweb/action-nodejs-gh-pages@1.0.0
 
 on:
   push:
@@ -8,7 +7,14 @@ on:
     
 jobs:
   build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
     steps:
-      - name: 'build xml'
-        uses = "guahanweb/actions/node-app@master"
-        args = "run start"
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run start
