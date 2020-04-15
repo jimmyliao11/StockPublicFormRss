@@ -1,0 +1,14 @@
+name: Node App Helper Actions
+uses: guahanweb/action-nodejs-gh-pages@1.0.0
+
+on:
+  push:
+  schedule:
+    - cron: '0 */6 * * *'
+    
+jobs:
+  build:
+    steps:
+      - name: 'build xml'
+        uses = "guahanweb/actions/node-app@master"
+        args = "run start"
