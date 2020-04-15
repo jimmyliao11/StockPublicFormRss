@@ -19,3 +19,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run start
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.COMMIT_SECRET }}
+        publish_branch: gh-pages
+        force_orphan: true
