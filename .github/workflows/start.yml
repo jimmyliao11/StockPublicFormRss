@@ -16,6 +16,7 @@ jobs:
         node-version: 12.x
     - run: yarn install
     - run: yarn start
+    - run: mkdir public
     - run: cp ./stock-public-form.xml ./public/
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
