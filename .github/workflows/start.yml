@@ -19,8 +19,9 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.COMMIT_SECRET }}
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./
         publish_branch: gh-pages
-        force_orphan: true
+        allow_empty_commit: true
         keep_files: true
+        force_orphan: true
