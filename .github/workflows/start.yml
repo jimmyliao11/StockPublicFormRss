@@ -21,7 +21,7 @@ jobs:
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./
-        publish_branch: gh-pages
+        publish_branch: HEAD:gh-pages
         allow_empty_commit: true
         keep_files: true
         force_orphan: true
