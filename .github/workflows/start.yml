@@ -14,14 +14,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - run: npm install
-    - run: npm run start
+    - run: yarn install
+    - run: yarn start
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./
         publish_branch: gh-pages
-        allow_empty_commit: true
+        allow_empty_commit: false
         keep_files: true
-        force_orphan: true
