@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/jimmyliao11/StockPublicFormRss#readme",
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^0.26.0",
     "iconv-lite": "^0.4.24",
     "rss": "^1.2.2"
   }
