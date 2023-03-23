@@ -4,9 +4,9 @@ const iconv = require('iconv-lite');
 const RSS = require('rss');
 
 //臺灣證券交易所 公開申購公告-抽籤日程表 網頁
-const SITE_URL = 'http://www.tse.com.tw/zh/page/announcement/publicForm.html';
+const SITE_URL = 'https://www.twse.com.tw/zh/announcement/public.html';
 //臺灣證券交易所 公開申購公告-抽籤日程表 CSV 下載
-const CSV_URL = `http://www.tse.com.tw/announcement/publicForm?response=csv&yy=${new Date().getFullYear()}`;
+const CSV_URL = `https://www.twse.com.tw/rwd/zh/announcement/publicForm?response=csv&date=${new Date().getFullYear()}0101`;
 //RSS XML檔案名稱
 const RSS_FILENAME = 'stock-public-form.xml';
 
